@@ -81,7 +81,7 @@ jobs:
             cp build/zephyr/zmk.uf2 "build/artifacts/${{ steps.variables.outputs.artifact-name }}.uf2"
           elif [ -f build/zephyr/zmk.bin ]
           then
-            cp build/zephyr/zmk.bin "build/artifacts/${{ steps.variables.outputs.artifact-name }}."
+            cp build/zephyr/zmk.bin "build/artifacts/${{ steps.variables.outputs.artifact-name }}.bin"
           fi
       - name: Archive (${{ steps.variables.outputs.display-name }})
         uses: actions/upload-artifact@v2
