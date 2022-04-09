@@ -82,8 +82,8 @@ jobs:
           elif [ -f build/zephyr/zmk.hex ]
           then
             cp build/zephyr/zmk.hex "build/artifacts/${{ steps.variables.outputs.artifact-name }}.hex"
-          then
           elif [ -f build/zephyr/zmk.bin ]
+          then
             cp build/zephyr/zmk.bin "build/artifacts/${{ steps.variables.outputs.artifact-name }}."
           fi
       - name: Archive (${{ steps.variables.outputs.display-name }})
