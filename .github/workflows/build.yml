@@ -79,11 +79,15 @@ jobs:
           if [ -f build/zephyr/zmk.uf2 ]
           then
             cp build/zephyr/zmk.uf2 "build/artifacts/${{ steps.variables.outputs.artifact-name }}.uf2"
+          elif [ -f build/zephyr/zmk.hex ]
+          then
+            cp build/zephyr/zmk.hex "build/artifacts/${{ steps.variables.outputs.artifact-name }}.hex"
+          then
           elif [ -f build/zephyr/zmk.bin ]
-            cp build/zephyr/zmk.hex "build/artifacts/${{ steps.variables.outputs.artifact-name }}.bin"
+            cp build/zephyr/zmk.bin "build/artifacts/${{ steps.variables.outputs.artifact-name }}."
           fi
       - name: Archive (${{ steps.variables.outputs.display-name }})
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: build/artifact
+          path: build/artifacts
