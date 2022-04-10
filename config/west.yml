@@ -2,7 +2,7 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: boards/bdn9-rev2-rgb
+    - name: petejohanson
       url-base: https://github.com/petejohanson
   projects:
     - name: zmk
