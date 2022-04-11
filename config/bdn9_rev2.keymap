@@ -8,9 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define BAS_L 1
-#define MED_L 2
-#define RGB_L 3 
+#define BAS_L 0
+#define MED_L 1
+#define RGB_L 2 
+
+#define NONE 0
 
 //Uncomment and keep whatever encoders are on your BDN9
 &sensors {
