@@ -27,34 +27,15 @@
 
 
 / {
-    macros {
-        win_terminal: win_terminal {
-            label = "Terminal";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp R>
-                , <&macro_release &macro_wait_time 200 &kp LGUI>
-                , <&macro_wait_time 20>
-                , <&kp W &kp T>
-                , <&kp ENTER>
-                ;
-        };
-    };
-};
-
-
-/ {
 	keymap {
 		compatible = "zmk,keymap";
 
 		base_layer {
 			label = "Base";
 			bindings = <
-				&tog MED_L      &none    &tog RGB_L
-				&win_terminal   &kp UP   &kp END
-				&kp LEFT        &kp DOWN &kp RIGHT
+				&tog MED_L &none    &tog RGB_L
+				&kp LG(4)  &kp UP   &kp END
+				&kp LEFT   &kp DOWN &kp RIGHT
 			>;
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
 		};
