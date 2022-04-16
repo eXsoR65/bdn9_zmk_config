@@ -52,9 +52,9 @@
 		base_layer {
 			label = "Base";
 			bindings = <
-				&tog MED_L  &none    &tog RGB_L
-				&kp HOME    &kp UP   &kp END
-				&kp LEFT    &kp DOWN &kp RIGHT
+				&tog MED_L      &none    &tog RGB_L
+				&win_terminal   &kp UP   &kp END
+				&kp LEFT        &kp DOWN &kp RIGHT
 			>;
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
 		};
