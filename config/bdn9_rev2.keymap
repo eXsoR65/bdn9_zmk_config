@@ -25,16 +25,17 @@
 // &right_encoder { status = "okay"; };
 
 
-stest: stest {
-    compatible = "zmk,behavior-sensor-rotate";
-    label = "sensor test";
-    #sensor-binding-cells = <0>;
-    bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
-};
-
-
 / {
-	keymap {
+    behaviors {
+        stest: stest {
+           compatible = "zmk,behavior-sensor-rotate";
+           label = "sensor test";
+           #sensor-binding-cells = <0>;
+           bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
+        };
+    };
+
+    keymap {
 		compatible = "zmk,keymap";
 
 		base_layer {
